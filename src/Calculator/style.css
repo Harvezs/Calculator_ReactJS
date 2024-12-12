@@ -1,76 +1,101 @@
-*{
+* {
     font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background: url('https://images.unsplash.com/photo-1672632826501-f0b82532fc52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');
+
+body {
+    background-color: #121212;
+    color: #ffffff;
     display: flex;
-    background-size: cover;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
 }
-h1{
-    font-size:70px;
+
+h1 {
+    font-size: 70px;
     text-decoration: underline;
     font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
 }
+
 .container {
-    top:50%;
-    left:50%;
+    position: relative;
     padding: 20px;
-    position: absolute;
-    transform: translate(-50%,-50%);
     margin: 0 auto;
     width: 350px;
     text-align: center;
-    border: 5px solid #101116;
-    /* background: ; */
-    border-radius: 5px ;
-}
-.keypad {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: minmax(60px,auto);
+    border: 2px solid #ffffff;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-input[type="text"]{
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    gap: 10px;
+}
+
+input[type="text"] {
     height: 75px;
-    width: 249px;
-    background-color: #10111600;
-    border: 0px;
-    color: black;
+    width: 100%;
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    color: #ffffff;
     text-align: right;
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 1px;
+    border-radius: 5px;
+    padding-right: 10px;
 }
 
 #clear {
     grid-column: 1/3;
     grid-row: 1;
-    color: black;
+    background-color: #ff1744;
+    color: #ffffff;
 }
-#result{
+
+#result {
     grid-column: 3/5;
     grid-row: 5;
+    background-color: #00e676;
+    color: #ffffff;
 }
-#backspace{
-    color: black;
+
+#backspace {
+    background-color: #ff8f00;
+    color: #ffffff;
 }
+
 button {
     margin: 5px;
-    border:none;
+    padding: 15px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: black;
+    background: #333;
     color: #ffffff;
     font-weight: 500;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #444;
 }
 
 input:focus,
 input:active,
 button:focus,
-button:active{
-    outline:none;
+button:active {
+    outline: none;
 }
 
 .highlight {
